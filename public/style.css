@@ -1,11 +1,7 @@
-@font-face {
-  font-family: "Shrikhand", "cursive";
-  src: url("MarianaCunha_3_05022021/font/Shrinkhand-Regular.ttf") format("truetype");
+.titre__menu {
+  font-family: Shrikhand, Verdana, Geneva, Tahoma, sans-serif;
 }
-@font-face {
-  font-family: "Roboto";
-  src: url("font/roboto.ttf") format("truetype");
-}
+
 /* Les couleurs */
 
 /*# sourceMappingURL=style.css.map */
