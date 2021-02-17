@@ -15,43 +15,45 @@
         <script src="https://kit.fontawesome.com/0a0c30a16b.js" crossorigin="anonymous"></script>
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href='http://fonts.googleapis.com/css?family=Shrikhand' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
     </head>
     <body>
 
         <!--Recherche-->
-
-        <div>
-            <a href="index.html">
-                <img src="Maquettes_Ohmyfood/images/logo/ohmyfood@2x.svg" alt="logo">
-            </a>
-        </div>
-        <form>
-            <i class="fas fa-map-marker-alt"></i>
-            <input type="text" name="Recherche" placeholder="Paris,Belleville" />
-        </form>
-        <h2>
-            Réservez le menu qui vous convient
-        </h2>
-        <div>
-            Découvrez des restaurants d'exception, sélectionnés par nos soins.
-        </div>
-        <div>
-            <input type="submit" value="Explorer nos restaurants" class="btn"/>
-        </div>
-        <h2>
-            Fonctionnement
-        </h2>
-        <ul>
-            <ol>
-                <i class="fas fa-mobile-alt"></i> Choisissez un restaurant
-            </ol>
-            <ol>
-                <i class="fas fa-bars"></i> Composez votre menu
-            </ol>
-            <ol>
-                <i class="fas fa-store"></i> Dégustez au restaurant
-            </ol>
-        </ul>
+        <header>
+            <div>
+                <a href="index.html" class="logo">
+                    <img src="Maquettes_Ohmyfood/images/logo/ohmyfood@2x.svg" alt="logo">
+                </a>
+            </div>
+            <form>
+                <i class="fas fa-map-marker-alt map"></i>
+                <input class="search__city" type="text" name="Recherche" placeholder="Paris,Belleville" />
+            </form>
+            <h2 class="intro">
+                Réservez le menu qui vous convient
+            </h2>
+            <div>
+                Découvrez des restaurants d'exception, sélectionnés par nos soins.
+            </div>
+            <div>
+                <input type="submit" value="Explorer nos restaurants" class="btn"/>
+            </div>
+            <h3>
+                Fonctionnement
+            </h3>
+            <ul>
+                <ol>
+                    <i class="fas fa-mobile-alt"></i> Choisissez un restaurant
+                </ol>
+                <ol>
+                    <i class="fas fa-bars"></i> Composez votre menu
+                </ol>
+                <ol>
+                    <i class="fas fa-store"></i> Dégustez au restaurant
+                </ol>
+            </ul>
+        </header>
 
         <!--Liste des restaurants-->
 

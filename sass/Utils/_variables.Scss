@@ -1,12 +1,17 @@
-/* Les couleurs */
+
 
 $color-primary:#9356DC;
 $color-secondary:#FF79DA;
 $color-tertiary:#99E2D0;
-$color-footer:#514f4f;
+$color-normal:black;
 
-/* Responsive */
 
-$breakpoints: (
-    mobile: 767px
-);
+$mobile1:320px;
+$mobile: 767px;
+$tablette1:768px;
+$tablette:1146px;
+$desktop1:1148px;
+$desktop:1280px;
+
+$font1: 'Shrikhand';
+$font2: 'Roboto';

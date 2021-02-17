@@ -3,3 +3,12 @@
 {
     font-family: Shrikhand, Verdana, Geneva, Tahoma, sans-serif;
 }
+
+body 
+{
+    @include mobile-only {
+    background-color: white;
+    margin: auto;
+    }
+    font-family: 'Roboto';
+}
