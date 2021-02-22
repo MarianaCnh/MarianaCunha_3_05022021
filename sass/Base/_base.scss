@@ -2,13 +2,23 @@
 .titre__menu
 {
     font-family: Shrikhand, Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
 }
 
 body 
 {
-    @include mobile-only {
     background-color: white;
     margin: auto;
-    }
     font-family: 'Roboto';
+}
+
+@mixin btn {
+    border-radius: 30px;
+    background: linear-gradient( $color-primary, $color-secondary);
+    padding: 1em;
+    font-family: 'Roboto', Courier New, Courier, monospace;
+    color: white;
+    border: none;
+    box-shadow: 1px 5px 10px rgb(173, 173, 173);
+    font-weight: bold;
 }

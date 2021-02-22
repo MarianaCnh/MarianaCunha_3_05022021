@@ -2,172 +2,148 @@
 <html lang="fr">
     <head>
         <title>Ohmyfood</title>
-        <meta name="description" content="Trouvez le meilleur restaurant près de chez vous !" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta charset="utf-8"/>
-        <meta property="og:title" content="Ohmyfood"/>
-        <meta property="og:type" content="Découvrir de nouveaux restaurants"/>
-        <meta property="og:url" content="http://Ohmyfood.com"/>
+        <meta
+            name="description"
+            content="Trouvez le meilleur restaurant près de chez vous !"
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta property="og:title" content="Ohmyfood" />
+        <meta property="og:type" content="Découvrir de nouveaux restaurants" />
+        <meta property="og:url" content="http://Ohmyfood.com" />
         <meta name="twitter:card" content="menu" />
         <meta name="twitter:site" content="@Ohmyfood" />
         <meta name="twitter:creator" content="@CnhMariana" />
-        <link rel="stylesheet" href="public/style.css"/>
-        <script src="https://kit.fontawesome.com/0a0c30a16b.js" crossorigin="anonymous"></script>
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href='http://fonts.googleapis.com/css?family=Shrikhand' rel='stylesheet' type='text/css'>
-        <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="public/style.css" />
+        <script
+            src="https://kit.fontawesome.com/0a0c30a16b.js"
+            crossorigin="anonymous"
+        ></script>
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link
+            href="http://fonts.googleapis.com/css?family=Shrikhand"
+            rel="stylesheet"
+            type="text/css"
+        />
+        <link
+            href="http://fonts.googleapis.com/css?family=Roboto"
+            rel="stylesheet"
+            type="text/css"
+        />
     </head>
     <body>
-
         <!--Tête de la page-->
 
-        <header>
+        <header class="header__menu">
             <a href="index.html">
-                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-left arrow"></i>
             </a>
-            <a href="#">
-                <img src="Maquettes_Ohmyfood/images/logo/ohmyfood@2x.svg" alt="logo">
-            </a>
-            <img src="Maquettes_Ohmyfood/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="Plat du restaurant Cité rouge">
+            <a href="#" class="logo__menu"> Ohmyfood </a>
         </header>
-        <h2 class="titre__menu">
-            À la française
-        </h2>
-        <a href="#">
-            <i class="far fa-heart"></i>
-        </a>
-        <div>
-            ENTRÉES
+        <img
+            src="Maquettes_Ohmyfood/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
+            alt="Plat du restaurant Cité rouge"
+            class="img__menu"
+        />
+        <div class="background__menu">
+            <h2 class="titre__menu">À la française</h2>
+            <a href="#">
+                <i class="far fa-heart coeur"></i>
+            </a>
+            <div><span>ENTR</span>ÉES</div>
+
+            <!-- Les entrés -->
+            <ul>
+                <li>
+                    <a href="#">
+                        <p>Tartare de poulpe acidulé</p>
+                        <p>Aux zests d'orange <span>25€</span></p>
+                        <i class="fas fa-check-circle"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <p>Velouté de légumes d'antan</p>
+                        <p>Carotte, panais, topinambour <span>35€</span></p>
+                        <i class="fas fa-check-circle"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <p>Soupe à l'oignon</p>
+                        <p>Revisitée <span>20€</span></p>
+                        <i class="fas fa-check-circle"></i>
+                    </a>
+                </li>
+            </ul>
+
+            <!-- Les plats-->
+
+            <div><span>PLAT</span>S</div>
+            <ul>
+                <li>
+                    <a href="#">
+                        <p>Coquilles de Saint-Jacques</p>
+                        <p>
+                            Accompagnées d'une purée de panais <span>40€</span>
+                        </p>
+                        <i class="fas fa-check-circle"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <p>Magret de canard</p>
+                        <p>
+                            Et parmentier de pommes de terres <span>35€</span>
+                        </p>
+                        <i class="fas fa-check-circle"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <p>Pigeonneau d'Ille-et-Vilaine</p>
+                        <p>
+                            Sur son lit de gnocchis aux légumes <span>44€</span>
+                        </p>
+                        <i class="fas fa-check-circle"></i>
+                    </a>
+                </li>
+            </ul>
+
+            <!-- Les desserts -->
+
+            <div>DESSERTS</div>
+            <ul>
+                <li>
+                    <a href="#">
+                        <p>Pétales de violettes glacés</p>
+                        <p>Et purée de noisettes <span>18€</span></p>
+                        <i class="fas fa-check-circle"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <p>Fondant au chocolat</p>
+                        <p>Revisité <span>22€</span></p>
+                        <i class="fas fa-check-circle"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <p>Millefeuille croustillant</p>
+                        <p>Myrtilles et pâte d'amande <span>23€</span></p>
+                        <i class="fas fa-check-circle"></i>
+                    </a>
+                </li>
+            </ul>
         </div>
-
-        <!-- Les entrés -->
-
-        <ul>
-            <li>
-                <a href="#">
-                    <p>
-                        Tartare de poulpe acidulé
-                    </p>
-                    <p>
-                        Aux zests d'orange <span>25€</span>
-                    </p>
-                    <i class="fas fa-check-circle"></i>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <p>
-                        Velouté de légumes d'antan
-                    </p>
-                    <p>
-                        Carotte, panais, topinambour <span>35€</span>
-                    </p>
-                    <i class="fas fa-check-circle"></i>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <p>
-                        Soupe à l'oignon
-                    </p>
-                    <p>
-                        Revisitée <span>20€</span>
-                    </p>
-                    <i class="fas fa-check-circle"></i>
-                </a>
-            </li>
-        </ul>
-
-        <!-- Les plats-->
-
         <div>
-            PLATS
-        </div>
-        <ul>
-            <li>
-                <a href="#">
-                    <p>
-                        Coquilles de Saint-Jacques
-                    </p>
-                    <p>
-                        Accompagnées d'une purée de panais <span>40€</span>
-                    </p>
-                    <i class="fas fa-check-circle"></i>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <p>
-                        Magret de canard
-                    </p>
-                    <p>
-                        Et parmentier de pommes de terres <span>35€</span>
-                    </p>
-                    <i class="fas fa-check-circle"></i>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <p>
-                        Pigeonneau d'Ille-et-Vilaine
-                    </p>
-                    <p>
-                        Sur son lit de gnocchis aux légumes <span>44€</span>
-                    </p>
-                    <i class="fas fa-check-circle"></i>
-                </a>
-            </li>
-        </ul>
-
-        <!-- Les desserts -->
-
-        <div>
-            DESSERTS
-        </div>
-        <ul>
-            <li>
-                <a href="#">
-                    <p>
-                        Pétales de violettes glacés
-                    </p>
-                    <p>
-                        Et purée de noisettes <span>18€</span>
-                    </p>
-                    <i class="fas fa-check-circle"></i>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <p>
-                        Fondant au chocolat
-                    </p>
-                    <p>
-                        Revisité <span>22€</span>
-                    </p>
-                    <i class="fas fa-check-circle"></i>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <p>
-                        Millefeuille croustillant
-                    </p>
-                    <p>
-                        Myrtilles et pâte d'amande <span>23€</span>
-                    </p>
-                    <i class="fas fa-check-circle"></i>
-                </a>
-            </li>
-        </ul>
-        <div>
-            <input type="submit" value="Commander" class="btn"/>
+            <input type="submit" value="Commander" class="btn" />
         </div>
 
         <!-- Footer -->
         <footer class="footer">
-            <h3>
-                Ohmyfood
-            </h3>
+            <h3>Ohmyfood</h3>
             <ul>
                 <li>
                     <a href="#">
@@ -180,14 +156,10 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
-                        Mentions légales
-                    </a>
+                    <a href="#"> Mentions légales </a>
                 </li>
                 <li>
-                    <a href="#">
-                        Contact
-                    </a>
+                    <a href="#"> Contact </a>
                 </li>
             </ul>
         </footer>

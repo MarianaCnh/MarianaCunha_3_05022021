@@ -1,6 +1,8 @@
-@import "./Utils/mixins";
 @import "./Utils/variables";
-@import "./layouts/header";
-@import "./layouts/footer";
+@import "./Utils/mixins";
 @import "./Base/base";
+@import "./layouts/header";
+@import "./layouts/accueil";
+@import "./layouts/menu";
+@import "./layouts/footer";
 

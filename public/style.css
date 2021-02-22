@@ -1,45 +1,194 @@
-/* Les couleurs */
-/* Responsive */
+@charset "UTF-8";
+.titre__menu {
+  font-family: Shrikhand, Verdana, Geneva, Tahoma, sans-serif;
+  margin: 0;
+}
+
+body {
+  background-color: white;
+  margin: auto;
+  font-family: "Roboto";
+}
+
 @media (min-width: 320px) and (max-width: 767px) {
   .titre__menu {
     font-size: x-large;
   }
 }
 
-@media (min-width: 320px) and (max-width: 767px) {
-  header {
-    margin: auto;
-    width: 100%;
-  }
-  header .logo {
-    display: flex;
-    justify-content: center;
-    padding: 20px;
-  }
-  header form {
-    padding: 10px;
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    padding: 8px;
-    background-color: #ebebeb;
-    box-shadow: inset 1px 1px 1px 1px #c5c5c5;
-  }
-  header .map {
-    padding: 5px;
-  }
-  header .search__city {
-    border: none;
-    background-color: #ebebeb;
-    outline: none;
-    color: black;
-  }
-  header .intro {
-    text-align: center;
-    margin: auto;
-    padding: 30px;
-    font-weight: bolder;
-  }
+header {
+  margin: auto;
+  width: 100%;
+}
+header .logo {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+header .form_container {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 8px;
+  background-color: #ebebeb;
+  box-shadow: inset 1px 1px 1px 1px #c5c5c5;
+}
+header .form_container .map {
+  padding: 5px;
+}
+header .form_container input {
+  border: none;
+  background-color: #ebebeb;
+  outline: none;
+}
+header .form_container input::placeholder {
+  color: black;
+}
+header .background {
+  background-color: #f8f8f8;
+  padding-bottom: 2em;
+}
+header .intro {
+  text-align: center;
+  margin: auto;
+  padding: 30px;
+  font-weight: bolder;
+}
+header .discover {
+  padding-bottom: 1em;
+  width: 100%;
+  text-align: center;
+}
+header .btn {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  border-radius: 30px;
+  background: linear-gradient(#9356DC, #FF79DA);
+  padding: 1em;
+  font-family: "Roboto", Courier New, Courier, monospace;
+  color: white;
+  border: none;
+  box-shadow: 1px 5px 10px #adadad;
+  font-weight: bold;
+}
+header .nav {
+  width: 100%;
+  justify-content: center;
+  font-size: small;
+}
+header .nav h3 {
+  margin-left: 2em;
+}
+header .nav ul {
+  padding: 1em;
+  margin: 10px;
+  list-style: none;
+}
+header .nav .iconnav {
+  color: #a3a3a3;
+  padding: 0.5em;
+}
+header .nav .iconnav:hover {
+  color: #9356DC;
+}
+header .nav li {
+  border-radius: 20px;
+  padding: 0.5em;
+  margin: 10px;
+  box-shadow: 1px 5px 10px #cfcfcf;
+  background-color: #f8f8f8;
+  font-weight: bold;
+  padding: 1em;
+  text-align: center;
+  position: relative;
+}
+header .nav li:hover {
+  background-color: #9356DC;
+  opacity: 0.3;
+  transition: 1000ms;
+}
+header .nav li .iconnav {
+  color: #a3a3a3;
+  padding: 0.5em;
+}
+header .nav li .iconnav:hover {
+  color: #9356DC;
+}
+header .nav span {
+  background-color: #9356DC;
+  color: white;
+  border-radius: 31px;
+  width: 15px;
+  padding: 1px 1px;
+  font-size: small;
+  margin-left: -30px;
+  position: absolute;
+  left: 25px;
+}
+
+.background2 {
+  background-color: #f8f8f8;
+  width: 100%;
+}
+
+.carteaccueil {
+  text-decoration: none;
+  margin: auto;
+  color: black;
+  background-color: white;
+  width: 90%;
+  height: 200px;
+}
+.carteaccueil .imgindex {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 30px 30px 0 0;
+}
+.carteaccueil .textecarte {
+  border-radius: 0 0 30px 30px;
+}
+
+/* Menu à la française */
+.header__menu {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  padding: 0.5em;
+}
+.header__menu .logo__menu {
+  font-family: "Shrikhand", Courier New, Courier, monospace;
+  font-size: x-large;
+  text-decoration: none;
+  color: black;
+  margin-left: 60px;
+}
+.header__menu .arrow {
+  text-decoration: none;
+  color: black;
+  padding: 0.5em;
+}
+
+.img__menu {
+  width: 100%;
+  height: 200px;
+  z-index: 1;
+  object-fit: cover;
+}
+
+.background__menu {
+  z-index: 2;
+  background-color: #e2e2e2;
+  border-radius: 30px 30px 0 0;
+  position: relative;
+  top: -30px;
+  padding-top: 10px;
+}
+.background__menu h2 {
+  margin-left: 10px;
+  font-weight: normal;
 }
 
 .footer {
@@ -61,20 +210,6 @@
 .footer a {
   text-decoration: none;
   color: white;
-}
-
-.titre__menu {
-  font-family: Shrikhand, Verdana, Geneva, Tahoma, sans-serif;
-}
-
-body {
-  font-family: "Roboto";
-}
-@media (min-width: 320px) and (max-width: 767px) {
-  body {
-    background-color: white;
-    margin: auto;
-  }
 }
 
 /*# sourceMappingURL=style.css.map */

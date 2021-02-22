@@ -6,38 +6,101 @@
 
 header
 {
-    @include mobile-only {
-        margin: auto;
+    margin: auto;
+    width: 100%;
+    .logo {
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+    }
+    .form_container {
+        padding: 10px;
+        display: flex;
+        justify-content: center;
         width: 100%;
-        .logo {
-            display: flex;
-            justify-content: center;
-            padding: 20px;
-        }
-        form{
-            padding: 10px;
-            display: flex;
-            justify-content: center;
-            width: 100%;
-            padding: 8px;
-            background-color:rgb(235, 235, 235);
-            box-shadow: inset 1px 1px 1px 1px rgb(197, 197, 197);
-        }
-        .map {
+        padding: 8px;
+        background-color:rgb(235, 235, 235);
+        box-shadow: inset 1px 1px 1px 1px rgb(197, 197, 197);
+        & .map {
             padding: 5px;
         }
-        .search__city {
+        & input {
             border: none;
             background-color:rgb(235, 235, 235);
             outline: none;
+        }
+        & input::placeholder {
             color: black;
         }
-        .intro {
+    } 
+    .background {
+        background-color: rgb(248, 248, 248);
+        padding-bottom: 2em;
+    }
+    .intro {
+        text-align: center;
+        margin: auto;
+        padding: 30px;
+        font-weight: bolder;
+    }
+    .discover {
+        padding-bottom: 1em;
+        width: 100%;
+        text-align: center;
+    } 
+    .btn {
+        display: flex;
+        justify-content: center;
+        margin: auto;
+        @include btn;
+    }
+    .nav {
+        width: 100%;
+        justify-content: center;
+        font-size: small;
+        & h3 {
+            margin-left: 2em;
+        }
+        & ul {
+            padding: 1em;
+            margin: 10px;
+            list-style: none;
+        }
+        .iconnav {
+            color: rgb(163, 163, 163);
+            padding: 0.5em;
+            &:hover {
+                color: $color-primary;
+            }
+        }
+        & li {
+            @include search;
+            padding: 1em;
             text-align: center;
-            margin: auto;
-            padding: 30px;
-            font-weight: bolder;
+            position: relative;
+            &:hover {
+                background-color: $color-primary;
+                opacity: 0.3;
+                transition: 1000ms;
+            }
+            .iconnav {
+                color: rgb(163, 163, 163);
+                padding: 0.5em;
+                &:hover {
+                    color: $color-primary;
+                }
+        }   }
+        span {
+            background-color: $color-primary;
+            color: white;
+            border-radius: 31px;
+            width: 15px;
+            padding: 1px 1px;
+            font-size: small;
+            margin-left: -30px;
+            position: absolute;
+            left: 25px;
         }
     }
-    
+        
 }
