@@ -2,172 +2,148 @@
 <html lang="fr">
     <head>
         <title>Ohmyfood</title>
-        <meta name="description" content="Trouvez le meilleur restaurant près de chez vous !" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta charset="utf-8"/>
-        <meta property="og:title" content="Ohmyfood"/>
-        <meta property="og:type" content="Découvrir de nouveaux restaurants"/>
-        <meta property="og:url" content="http://Ohmyfood.com"/>
+        <meta
+            name="description"
+            content="Trouvez le meilleur restaurant près de chez vous !"
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta property="og:title" content="Ohmyfood" />
+        <meta property="og:type" content="Découvrir de nouveaux restaurants" />
+        <meta property="og:url" content="http://Ohmyfood.com" />
         <meta name="twitter:card" content="menu" />
         <meta name="twitter:site" content="@Ohmyfood" />
         <meta name="twitter:creator" content="@CnhMariana" />
-        <link rel="stylesheet" href="public/style.css"/>
-        <script src="https://kit.fontawesome.com/0a0c30a16b.js" crossorigin="anonymous"></script>
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href='http://fonts.googleapis.com/css?family=Shrikhand' rel='stylesheet' type='text/css'>
-        <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="public/style.css" />
+        <script
+            src="https://kit.fontawesome.com/0a0c30a16b.js"
+            crossorigin="anonymous"
+        ></script>
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link
+            href="http://fonts.googleapis.com/css?family=Shrikhand"
+            rel="stylesheet"
+            type="text/css"
+        />
+        <link
+            href="http://fonts.googleapis.com/css?family=Roboto"
+            rel="stylesheet"
+            type="text/css"
+        />
     </head>
     <body>
-
         <!--Tête de la page-->
 
-        <header>
+        <header class="header__menu">
             <a href="index.html">
-                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-left arrow"></i>
             </a>
-            <a href="#">
-                <img src="Maquettes_Ohmyfood/images/logo/ohmyfood@2x.svg" alt="logo">
-            </a>
-            <img src="Maquettes_Ohmyfood/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Plat du restaurant Folie-Mérincourt">
+            <a href="#" class="logo__menu"> Ohmyfood </a>
         </header>
-        <h2 class="titre__menu">
-            Le délice des sens
-        </h2>
-        <a href="#">
-            <i class="far fa-heart"></i>
-        </a>
-        <div>
-            ENTRÉES
-        </div>
+        <img
+            src="Maquettes_Ohmyfood/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
+            alt="Plat du restaurant Folie-Mérincourt"
+            class="img__menu"
+        />
+        <div class="background__menu">
+            <h2 class="titre__menu">Le délice des sens</h2>
+            <a href="#">
+                <i class="far fa-heart coeur"></i>
+            </a>
+            <div><span class="menu__deco">ENTR</span>ÉES</div>
 
-        <!-- Les entrés -->
+            <!-- Les entrés -->
 
-        <ul>
-            <li>
-                <a href="#">
-                    <p>
-                        Tartare de thon
-                    </p>
-                    <p>
-                        Assaisonné au yuzu <span>25€</span>
-                    </p>
-                    <i class="fas fa-check-circle"></i>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <p>
-                       Bouchée de homard croustillant
-                    </p>
-                    <p>
-                        Et sa farandole de petits légumes <span>35€</span>
-                    </p>
-                    <i class="fas fa-check-circle"></i>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <p>
-                        Velouté de cèpes
-                    </p>
-                    <p>
-                        Aux truffes <span>20€</span>
-                    </p>
-                    <i class="fas fa-check-circle"></i>
-                </a>
-            </li>
-        </ul>
+            <ul>
+                <li>
+                    <a href="#">
+                        <p class="textecarte1">Tartare de thon</p>
+                        <p>
+                            Assaisonné au yuzu
+                            <span class="textecarte1">25€</span>
+                        </p>
+                        <i class="fas fa-check-circle"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <p>Bouchée de homard croustillant</p>
+                        <p>
+                            Et sa farandole de petits légumes <span>35€</span>
+                        </p>
+                        <i class="fas fa-check-circle"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <p>Velouté de cèpes</p>
+                        <p>Aux truffes <span>20€</span></p>
+                        <i class="fas fa-check-circle"></i>
+                    </a>
+                </li>
+            </ul>
 
-        <!-- Les plats-->
+            <!-- Les plats-->
 
-        <div>
-            PLATS
-        </div>
-        <ul>
-            <li>
-                <a href="#">
-                    <p>
-                        Poulet rôti aux herbes de provence
-                    </p>
-                    <p>
-                        Et sa crème de truffe <span>40€</span>
-                    </p>
-                    <i class="fas fa-check-circle"></i>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <p>
-                        Langoustine rôtie
-                    </p>
-                    <p>
-                        Et ses légumes de saison <span>35€</span>
-                    </p>
-                    <i class="fas fa-check-circle"></i>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <p>
-                        Côte de boeuf angus
-                    </p>
-                    <p>
-                        Et sa purée de panais <span>44€</span>
-                    </p>
-                    <i class="fas fa-check-circle"></i>
-                </a>
-            </li>
-        </ul>
+            <div><span class="menu__deco">PLAT</span>S</div>
+            <ul>
+                <li>
+                    <a href="#">
+                        <p>Poulet rôti aux herbes de provence</p>
+                        <p>Et sa crème de truffe <span>40€</span></p>
+                        <i class="fas fa-check-circle"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <p>Langoustine rôtie</p>
+                        <p>Et ses légumes de saison <span>35€</span></p>
+                        <i class="fas fa-check-circle"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <p>Côte de boeuf angus</p>
+                        <p>Et sa purée de panais <span>44€</span></p>
+                        <i class="fas fa-check-circle"></i>
+                    </a>
+                </li>
+            </ul>
 
-        <!-- Les desserts -->
+            <!-- Les desserts -->
 
-        <div>
-            DESSERTS
-        </div>
-        <ul>
-            <li>
-                <a href="#">
-                    <p>
-                        Farandole de desserts
-                    </p>
-                    <p>
-                        Du chef <span>18€</span>
-                    </p>
-                    <i class="fas fa-check-circle"></i>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <p>
-                        Crème brulée
-                    </p>
-                    <p>
-                        Revisitée <span>22€</span>
-                    </p>
-                    <i class="fas fa-check-circle"></i>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <p>
-                        Tiramisu
-                    </p>
-                    <p>
-                        À la noisette <span>23€</span>
-                    </p>
-                    <i class="fas fa-check-circle"></i>
-                </a>
-            </li>
-        </ul>
-        <div>
-            <input type="submit" value="Commander" class="btn"/>
+            <div><span class="menu__deco">DESSE</span>RTS</div>
+            <ul>
+                <li>
+                    <a href="#">
+                        <p>Farandole de desserts</p>
+                        <p>Du chef <span>18€</span></p>
+                        <i class="fas fa-check-circle"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <p>Crème brulée</p>
+                        <p>Revisitée <span>22€</span></p>
+                        <i class="fas fa-check-circle"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <p>Tiramisu</p>
+                        <p>À la noisette <span>23€</span></p>
+                        <i class="fas fa-check-circle"></i>
+                    </a>
+                </li>
+            </ul>
+            <div>
+                <input type="submit" value="Commander" class="btn" />
+            </div>
         </div>
 
         <!-- Footer -->
         <footer class="footer">
-            <h3>
-                Ohmyfood
-            </h3>
+            <h3>Ohmyfood</h3>
             <ul>
                 <li>
                     <a href="#">
@@ -180,14 +156,10 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
-                        Mentions légales
-                    </a>
+                    <a href="#"> Mentions légales </a>
                 </li>
                 <li>
-                    <a href="#">
-                        Contact
-                    </a>
+                    <a href="#"> Contact </a>
                 </li>
             </ul>
         </footer>

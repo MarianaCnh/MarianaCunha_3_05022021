@@ -1,4 +1,4 @@
-/* Menu à la française */
+/* Pages des menu */
 .header__menu {
     width: 100%;
     display: flex;
@@ -31,9 +31,45 @@
     position: relative;
     top: -30px;
     padding-top: 10px;
+    padding-bottom: 30px;
+    & .coeur {
+        display: flex;
+        justify-content: flex-end;
+        text-decoration: none;
+    }
     & h2 {
         margin-left: 10px;
         font-weight: normal;
+    }
+    & .menu__deco {
+        border-bottom: 1px solid $color-tertiary;
+    }
+    & ul {
+        list-style: none;
+        color: $color-normal;
+        padding: 0;
+    }
+    & li {
+        background-color: white;
+        border-radius: 30px;
+        margin: 10px;
+        box-shadow: 1px 5px 10px rgb(121, 119, 119);
+    }
+    &  a {
+        color: $color-normal;
+        text-decoration: none;
+        padding: 20px;
+    }
+    & p {
+        margin: 0;
+    }
+    
+
+    .btn{
+        display: flex;
+        justify-content: center;
+        margin: auto;
+        @include btn;
     }
     
 }
