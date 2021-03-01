@@ -1,4 +1,4 @@
-.titre__menu {
+.menu--titre {
   font-family: Shrikhand, Verdana, Geneva, Tahoma, sans-serif;
   margin: 0;
 }
@@ -7,6 +7,11 @@ body {
   background-color: white;
   margin: auto;
   font-family: "Roboto";
+}
+
+ul {
+  padding: 0;
+  margin: 0;
 }
 
 @media (min-width: 320px) and (max-width: 767px) {
@@ -25,11 +30,9 @@ header .logo {
   padding: 20px;
 }
 header .form_container {
-  padding: 10px;
-  display: flex;
-  justify-content: center;
+  text-align: center;
   width: 100%;
-  padding: 8px;
+  padding: 1em 0 1em;
   background-color: #ebebeb;
   box-shadow: inset 1px 1px 1px 1px #c5c5c5;
 }
@@ -40,11 +43,13 @@ header .form_container input {
   border: none;
   background-color: #ebebeb;
   outline: none;
+  width: 88px;
+  text-align: center;
 }
 header .form_container input::placeholder {
   color: black;
 }
-header .background {
+header .container--principal {
   background-color: #f8f8f8;
   padding-bottom: 2em;
 }
@@ -71,6 +76,11 @@ header .btn {
   border: none;
   box-shadow: 1px 5px 10px #adadad;
   font-weight: bold;
+}
+header .btn::hover {
+  box-shadow: 0px 3px 4px 2px grey;
+  background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), #9356DC, #FF79DA;
+  transition: 750ms;
 }
 header .nav {
   width: 100%;
@@ -125,58 +135,77 @@ header .nav span {
   margin-left: -30px;
   position: absolute;
   left: 25px;
+  margin-top: 5px;
 }
 
-.background2 {
+.container--cartes {
   background-color: #f0f0f0;
-  width: 100%;
-  display: grid;
-  grid-template-columns: 90%;
-  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
 }
 
-.carteaccueil {
+.carte {
   text-decoration: none;
   color: black;
   background-color: white;
   border-radius: 30px;
   margin-bottom: 20px;
   box-shadow: 1px 5px 10px #cfcfcf;
+  width: 90%;
 }
-.carteaccueil .imgindex {
+.carte .carte--img {
   width: 100%;
   height: 150px;
   object-fit: cover;
   border-radius: 30px 30px 0 0;
 }
-.carteaccueil .textecarte1 {
+.carte .carte--texte1 {
   margin: 0;
   font-weight: bold;
+  padding: 2px;
+  width: 50%;
 }
-.carteaccueil .textecarte2 {
+.carte .carte--texte2 {
   margin: 0;
+  padding: 2px;
+  width: 50%;
 }
-.carteaccueil .a__coeur {
+.carte .carte--coeur {
   display: flex;
   justify-content: flex-end;
+  position: relative;
+  right: 19px;
+  bottom: 29px;
+  width: 20%;
 }
-.carteaccueil .a__new {
+.carte .carte--coeur2 {
+  left: 272px;
+  position: relative;
+  top: -17px;
+  display: none;
+}
+.carte .carte--coeur2:hover {
+  background: linear-gradient(#9356DC, #FF79DA);
+}
+.carte .carte--nouveau {
   position: absolute;
-  display: flex;
+  right: 30px;
   background-color: #99E2D0;
   color: #2c916f;
   padding: 5px;
   width: 18%;
-  margin: 0;
+  margin-top: 20px;
   font-size: small;
+  text-align: center;
 }
 
 /* Pages des menu */
 .header__menu {
   width: 100%;
   display: flex;
-  flex-direction: row;
-  padding: 0.5em;
+  justify-content: flex-start;
+  margin: 10px 0;
 }
 .header__menu .logo__menu {
   font-family: "Shrikhand", Courier New, Courier, monospace;
@@ -198,7 +227,7 @@ header .nav span {
   object-fit: cover;
 }
 
-.background__menu {
+.menu--principal {
   z-index: 2;
   background-color: #e2e2e2;
   border-radius: 30px 30px 0 0;
@@ -207,41 +236,85 @@ header .nav span {
   padding-top: 10px;
   padding-bottom: 30px;
 }
-.background__menu .coeur {
+.menu--principal.coeur {
   display: flex;
   justify-content: flex-end;
   text-decoration: none;
 }
-.background__menu h2 {
-  margin-left: 10px;
-  font-weight: normal;
-}
-.background__menu .menu__deco {
+.menu--principal .menu--decoration {
   border-bottom: 1px solid #99E2D0;
 }
-.background__menu ul {
+.menu--principal .menu--ul {
   list-style: none;
   color: black;
   padding: 0;
 }
-.background__menu li {
+.menu--principal .menu--li {
+  display: flex;
   background-color: white;
   border-radius: 30px;
   margin: 10px;
   box-shadow: 1px 5px 10px #797777;
 }
-.background__menu a {
+.menu--principal .menu--li:hover .check--anime {
+  width: 12em;
+}
+.menu--principal .menu--li:hover .menu--checkicon {
+  transform: rotate(1turn);
+  display: initial;
+  transition: 1500ms;
+}
+.menu--principal .menu--checkicon {
+  transform: rotate(0);
+  margin: auto;
+  display: none;
+}
+.menu--principal .check--anime {
+  transition: width 1500ms;
+  display: flex;
+  background-color: #99E2D0;
+  border-radius: 0 30px 30px 0;
+  width: 0;
+}
+.menu--principal .menu--lien {
   color: black;
   text-decoration: none;
-  padding: 20px;
+  padding: 10px;
+  display: block;
 }
-.background__menu p {
-  margin: 0;
+.menu--principal .menu--texte {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 0.5em 0em 0.5em 0.5em;
+  overflow: hidden;
 }
-.background__menu .btn {
+.menu--principal .menu--prix {
+  display: flex;
+  font-weight: bold;
+  padding-top: 2em;
+  margin-right: 1em;
+}
+.menu--principal .menu--texte__gras, .menu--principal .menu--ingredients {
+  font-weight: bold;
+  margin: 5px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.menu--principal .menu--ingredients {
+  font-size: medium;
+  font-weight: lighter;
+}
+.menu--principal .menu--checkicon {
+  color: white;
+  font-size: 2em;
+}
+.menu--principal .btn {
   display: flex;
   justify-content: center;
   margin: auto;
+  cursor: pointer;
   border-radius: 30px;
   background: linear-gradient(#9356DC, #FF79DA);
   padding: 1em;
@@ -251,24 +324,28 @@ header .nav span {
   box-shadow: 1px 5px 10px #adadad;
   font-weight: bold;
 }
+.menu--principal .btn:hover {
+  box-shadow: 0px 3px 4px 2px grey;
+  background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), #9356DC, #FF79DA;
+  transition: 750ms;
+}
 
-.footer {
+.container--footer {
   background-color: #353232;
-  width: 100%;
   padding: 10px;
 }
-.footer h3 {
+.container--footer h3 {
   font-family: "Shrikhand";
   font-weight: normal;
   color: white;
   margin: 15px;
 }
-.footer ul {
+.container--footer ul {
   padding: 20px;
   list-style: none;
   line-height: 1.5em;
 }
-.footer a {
+.container--footer a {
   text-decoration: none;
   color: white;
 }

@@ -1,6 +1,5 @@
-.footer {
+.container--footer {
     background-color: #353232;
-    width: 100%;
     padding: 10px;
     @include mobile-only;
     & h3 {

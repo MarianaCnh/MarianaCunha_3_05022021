@@ -2,8 +2,8 @@
 .header__menu {
     width: 100%;
     display: flex;
-    flex-direction: row;
-    padding: 0.5em;
+    justify-content: flex-start;
+    margin: 10px 0;
     & .logo__menu {
         font-family: 'Shrikhand', Courier New, Courier, monospace;
         font-size: x-large;
@@ -24,7 +24,7 @@
     object-fit: cover;
 }
 
-.background__menu {
+.menu--principal {
     z-index: 2;
     background-color: rgb(226, 226, 226);
     border-radius: 30px 30px 0 0;
@@ -32,44 +32,97 @@
     top: -30px;
     padding-top: 10px;
     padding-bottom: 30px;
-    & .coeur {
+    &.coeur {
         display: flex;
         justify-content: flex-end;
         text-decoration: none;
     }
-    & h2 {
-        margin-left: 10px;
-        font-weight: normal;
-    }
-    & .menu__deco {
+    .menu--decoration {
         border-bottom: 1px solid $color-tertiary;
     }
-    & ul {
+    .menu--ul {
         list-style: none;
         color: $color-normal;
         padding: 0;
     }
-    & li {
+    .menu--li {
+        display: flex;
         background-color: white;
         border-radius: 30px;
         margin: 10px;
         box-shadow: 1px 5px 10px rgb(121, 119, 119);
-    }
-    &  a {
-        color: $color-normal;
-        text-decoration: none;
-        padding: 20px;
-    }
-    & p {
-        margin: 0;
+        &:hover {
+            .check--anime {
+                width: 12em;
+            }
+            
+            .menu--checkicon {
+                transform: rotate(1turn);
+                display: initial;
+                transition: 1500ms;
+            }
+            
+        } 
     }
     
+    .menu--checkicon {
+        transform: rotate(0);
+        margin: auto;
+        display: none;
+       
+    }
+    .check--anime {
+        transition: width 1500ms;
+        display: flex;
+        background-color: $color-tertiary;
+        border-radius: 0 30px 30px 0;
+        width: 0;
+    } 
+    .menu--lien{
+        color: $color-normal;
+        text-decoration: none;
+        padding: 10px;
+        display: block;
+    }
+    .menu--texte {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        padding: 0.5em 0em 0.5em 0.5em;
+        overflow: hidden;
+    }
+    .menu--prix {
+        display: flex;
+        font-weight: bold;
+        padding-top: 2em;
+        margin-right: 1em;
+
+    }
+    .menu--texte__gras, .menu--ingredients {
+        font-weight: bold;
+        margin: 5px;
+        white-space:nowrap;
+        text-overflow:ellipsis;
+         overflow:hidden;
+    }
+    .menu--ingredients {
+        font-size: medium;
+        font-weight: lighter;
+    }
+    .menu--checkicon {
+        color: white;
+        font-size: 2em;
+    }
 
     .btn{
         display: flex;
         justify-content: center;
         margin: auto;
+        cursor: pointer;
         @include btn;
+        &:hover{
+            @include btn--hover
+        }
     }
     
 }
