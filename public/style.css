@@ -153,6 +153,9 @@ header .nav span {
   margin-bottom: 20px;
   box-shadow: 1px 5px 10px #cfcfcf;
   width: 90%;
+  overflow: hidden;
+  display: flex;
+  overflow: hidden;
 }
 .carte .carte--img {
   width: 100%;
@@ -174,19 +177,28 @@ header .nav span {
 .carte .carte--coeur {
   display: flex;
   justify-content: flex-end;
+  font-size: large;
+}
+.carte .carte--coeur1 {
   position: relative;
-  right: 19px;
-  bottom: 29px;
-  width: 20%;
+  bottom: 30px;
 }
 .carte .carte--coeur2 {
-  left: 272px;
   position: relative;
-  top: -17px;
-  display: none;
+  top: -30px;
+  left: -18px;
+  opacity: 0;
 }
 .carte .carte--coeur2:hover {
-  background: linear-gradient(#9356DC, #FF79DA);
+  animation: animecoeur 1s;
+  background: -moz-linear-gradient(top, #9356DC 0%, #FF79DA 100%);
+  background: -webkit-linear-gradient(top, #9356DC 0%, #FF79DA 100%);
+  background: linear-gradient(to bottom, #9356DC 0%, #FF79DA 100%);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 1;
 }
 .carte .carte--nouveau {
   position: absolute;
@@ -200,6 +212,22 @@ header .nav span {
   text-align: center;
 }
 
+@keyframes animecoeur {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    -webkit-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+    opacity: 1;
+  }
+}
 /* Pages des menu */
 .header__menu {
   width: 100%;
@@ -255,6 +283,7 @@ header .nav span {
   border-radius: 30px;
   margin: 10px;
   box-shadow: 1px 5px 10px #797777;
+  overflow: hidden;
 }
 .menu--principal .menu--li:hover .check--anime {
   width: 12em;
@@ -333,6 +362,39 @@ header .nav span {
   transition: 750ms;
 }
 
+.menu--li li {
+  animation: animemenu 1s linear;
+  animation-fill-mode: both;
+}
+
+.menu--li li:nth-child(1) {
+  animation-delay: 0.5s;
+}
+
+.menu--li li:nth-child(2) {
+  animation-delay: 1s;
+}
+
+.menu--li li:nth-child(3) {
+  animation-delay: 1.5s;
+}
+
+.menu--li li:nth-child(4) {
+  animation-delay: 2s;
+}
+
+@keyframes animemenu {
+  0% {
+    -webkit-transform: translateY(-1000px);
+    transform: translateY(-1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 @keyframes animecheck {
   from {
     -webkit-transform: rotate(0);
@@ -341,22 +403,6 @@ header .nav span {
   to {
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
-  }
-}
-@keyframes animemenu {
-  from {
-    -webkit-transform: scale(0);
-    transform: scale(0);
-    -webkit-transform-origin: 0% 0%;
-    transform-origin: 0% 0%;
-    opacity: 1;
-  }
-  to {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-    -webkit-transform-origin: 0% 0%;
-    transform-origin: 0% 0%;
-    opacity: 1;
   }
 }
 .container--footer {

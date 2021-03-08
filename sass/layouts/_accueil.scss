@@ -14,6 +14,9 @@
     margin-bottom: 20px;
     box-shadow: 1px 5px 10px rgb(207, 207, 207);
     width: 90%;
+    overflow: hidden;
+    display: flex;
+    overflow: hidden;
     .carte--img {
         @include imgcarte;
     }
@@ -31,19 +34,27 @@
     .carte--coeur {
         display: flex;
         justify-content: flex-end;
-        position: relative;
-        right: 19px;
-        bottom: 29px;
-        width: 20%;
+        font-size: large;
     }
-    .carte--coeur2
-    {
-        left: 272px;
+    .carte--coeur1 {
         position: relative;
-        top: -17px;
-        display: none;
+        bottom: 30px;
+    }
+    .carte--coeur2 {
+        position: relative;
+        top: -30px;
+        left: -18px;
+        opacity: 0;
         &:hover {
-            background: linear-gradient( $color-primary, $color-secondary);
+            animation: animecoeur 1s;
+            background:-moz-linear-gradient(top, $color-primary 0%, $color-secondary 100%); 
+            background: -webkit-linear-gradient(top, $color-primary 0%,$color-secondary 100%); 
+            background: linear-gradient(to bottom, $color-primary 0%, $color-secondary 100%);
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color:transparent;
+            opacity: 1;
         }
     }
     .carte--nouveau {
@@ -59,3 +70,21 @@
     }
 }
 
+@keyframes animecoeur {
+    0% {
+      -webkit-transform: scale(0);
+              transform: scale(0);
+      -webkit-transform-origin: 50% 100%;
+              transform-origin: 50% 100%;
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-transform-origin: 50% 100%;
+              transform-origin: 50% 100%;
+      opacity: 1;
+    }
+  }
+  
+  
