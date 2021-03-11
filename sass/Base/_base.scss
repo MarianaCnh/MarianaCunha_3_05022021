@@ -8,8 +8,10 @@
 body 
 {
     background-color: white;
-    margin: auto;
+    margin: 0;
+    padding: 0;
     font-family: 'Roboto';
+    z-index: 1;
 }
 
 ul {

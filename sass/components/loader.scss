@@ -1,0 +1,78 @@
+
+/* loader */ 
+
+.loader {
+    background: linear-gradient($color-primary, $color-tertiary, $color-secondary);
+    font-family: 'Shrikhand' , Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
+    position: absolute;
+    z-index: 4;
+    width: 100%;
+    height: 100%;
+    cursor: wait;
+    .loader::before {
+        display: none;
+    }
+    .loader::after {
+        animation: sortir 3s;
+        display: initial;
+    }
+    .loader--animation {
+        animation: texteloader 2s;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        font-size: xx-large;
+        .loader--texte {
+            animation: tourne 1s;
+            text-align: center;
+            margin: auto;
+            vertical-align: middle;
+        }
+    }
+
+}
+@keyframes tourne {
+    0% {
+      -webkit-transform: rotate(0) scale(1);
+              transform: rotate(0) scale(1);
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: rotate(-540deg) scale(0);
+              transform: rotate(-540deg) scale(0);
+      opacity: 0;
+    }
+}
+
+@keyframes texteloader {
+    0% {
+      -webkit-transform: translateX(-1000px) scaleX(2.5) scaleY(0.2);
+              transform: translateX(-1000px) scaleX(2.5) scaleY(0.2);
+      -webkit-transform-origin: 100% 50%;
+              transform-origin: 100% 50%;
+      -webkit-filter: blur(40px);
+              filter: blur(40px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateX(0) scaleY(1) scaleX(1);
+              transform: translateX(0) scaleY(1) scaleX(1);
+      -webkit-transform-origin: 50% 50%;
+              transform-origin: 50% 50%;
+      -webkit-filter: blur(0);
+              filter: blur(0);
+      opacity: 1;
+    }
+  }
+  @keyframes sortir {
+    0% {
+      -webkit-transform: translateY(0) translateX(0);
+              transform: translateY(0) translateX(0);
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: translateY(-1000px) translateX(1000px);
+              transform: translateY(-1000px) translateX(1000px);
+      opacity: 0;
+    }
+  }

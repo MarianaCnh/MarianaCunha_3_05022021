@@ -5,8 +5,10 @@
 
 body {
   background-color: white;
-  margin: auto;
+  margin: 0;
+  padding: 0;
   font-family: "Roboto";
+  z-index: 1;
 }
 
 ul {
@@ -14,6 +16,81 @@ ul {
   margin: 0;
 }
 
+/* loader */
+.loader {
+  background: linear-gradient(#9356DC, #99E2D0, #FF79DA);
+  font-family: "Shrikhand", Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
+  position: absolute;
+  z-index: 4;
+  width: 100%;
+  height: 100%;
+  cursor: wait;
+}
+.loader .loader::before {
+  display: none;
+}
+.loader .loader::after {
+  animation: sortir 3s;
+  display: initial;
+}
+.loader .loader--animation {
+  animation: texteloader 2s;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  font-size: xx-large;
+}
+.loader .loader--animation .loader--texte {
+  animation: tourne 1s;
+  text-align: center;
+  margin: auto;
+  vertical-align: middle;
+}
+
+@keyframes tourne {
+  0% {
+    -webkit-transform: rotate(0) scale(1);
+    transform: rotate(0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: rotate(-540deg) scale(0);
+    transform: rotate(-540deg) scale(0);
+    opacity: 0;
+  }
+}
+@keyframes texteloader {
+  0% {
+    -webkit-transform: translateX(-1000px) scaleX(2.5) scaleY(0.2);
+    transform: translateX(-1000px) scaleX(2.5) scaleY(0.2);
+    -webkit-transform-origin: 100% 50%;
+    transform-origin: 100% 50%;
+    -webkit-filter: blur(40px);
+    filter: blur(40px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0) scaleY(1) scaleX(1);
+    transform: translateX(0) scaleY(1) scaleX(1);
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    -webkit-filter: blur(0);
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+@keyframes sortir {
+  0% {
+    -webkit-transform: translateY(0) translateX(0);
+    transform: translateY(0) translateX(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateY(-1000px) translateX(1000px);
+    transform: translateY(-1000px) translateX(1000px);
+    opacity: 0;
+  }
+}
 @media (min-width: 320px) and (max-width: 767px) {
   .titre__menu {
     font-size: x-large;
@@ -143,6 +220,7 @@ header .nav span {
   display: flex;
   flex-direction: column;
   margin: auto;
+  z-index: 2;
 }
 
 .carte {
@@ -362,36 +440,32 @@ header .nav span {
   transition: 750ms;
 }
 
-.menu--li li {
+.menu--ul li {
   animation: animemenu 1s linear;
   animation-fill-mode: both;
 }
 
-.menu--li li:nth-child(1) {
+.menu--ul li:nth-child(1) {
   animation-delay: 0.5s;
 }
 
-.menu--li li:nth-child(2) {
+.menu--ul li:nth-child(2) {
   animation-delay: 1s;
 }
 
-.menu--li li:nth-child(3) {
+.menu--ul li:nth-child(3) {
   animation-delay: 1.5s;
 }
 
-.menu--li li:nth-child(4) {
+.menu--ul li:nth-child(4) {
   animation-delay: 2s;
 }
 
 @keyframes animemenu {
   0% {
-    -webkit-transform: translateY(-1000px);
-    transform: translateY(-1000px);
     opacity: 0;
   }
   100% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
     opacity: 1;
   }
 }
