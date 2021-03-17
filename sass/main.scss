@@ -1,9 +1,9 @@
 @import "./Utils/variables";
 @import "./Utils/mixins";
+@import "./components/cartes.scss";
 @import "./Base/base";
 @import "./components/loader.scss";
-@import "./layouts/header";
-@import "./layouts/accueil";
-@import "./layouts/menu";
+@import "./components/header";
+@import "./layouts/pagesdumenu.scss";
 @import "./layouts/footer";
 

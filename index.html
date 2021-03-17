@@ -32,62 +32,64 @@
         />
     </head>
     <body>
-        <!--Loader-->
-
+        <!--Loader
         <div class="loader">
             <div class="loader--animation">
                 <label class="loader--texte">Bienvenue</label>
             </div>
-        </div>
+        </div>-->
         <!--Recherche-->
-        <header>
-            <div>
-                <a href="index.html" class="logo">
-                    <img
-                        src="Maquettes_Ohmyfood/images/logo/ohmyfood@2x.svg"
-                        alt="logo"
-                    />
-                </a>
-            </div>
-            <div class="form_container">
-                <i class="fas fa-map-marker-alt map"></i>
-                <input
-                    type="text"
-                    name="Recherche"
-                    placeholder="Paris,Belleville"
-                />
-            </div>
-            <div class="container--principal">
-                <h2 class="container--principal intro">
-                    Réservez le menu qui vous convient
-                </h2>
-                <div class="container--principal discover">
-                    Découvrez des restaurants d'exception, sélectionnés par nos
-                    soins.
-                </div>
+        <header class="header__index">
+            <div class="header__background">
                 <div>
+                    <a href="index.html" class="logo">
+                        <img
+                            src="Maquettes_Ohmyfood/images/logo/ohmyfood@2x.svg"
+                            alt="logo"
+                        />
+                    </a>
+                </div>
+                <div class="form_container">
+                    <i class="fas fa-map-marker-alt map"></i>
                     <input
-                        type="submit"
-                        value="Explorer nos restaurants"
-                        class="container--principal btn"
+                        type="text"
+                        name="Recherche"
+                        placeholder="Paris,Belleville"
+                        class="header__recherche"
                     />
                 </div>
+                <div class="container--principal">
+                    <h2 class="container--principal intro">
+                        Réservez le menu qui vous convient
+                    </h2>
+                    <div class="container--principal discover">
+                        Découvrez des restaurants d'exception, sélectionnés par
+                        nos soins.
+                    </div>
+                    <div>
+                        <input
+                            type="submit"
+                            value="Explorer nos restaurants"
+                            class="container--principal btn"
+                        />
+                    </div>
+                </div>
             </div>
-            <nav class="container--principal nav">
-                <h3>Fonctionnement</h3>
-                <ul>
-                    <li>
-                        <span>1</span>
+            <nav class="container__principal">
+                <h3 class="container__titre">Fonctionnement</h3>
+                <ul class="container__choixrestaurant">
+                    <li class="container__cartes">
+                        <span class="container__numero">1</span>
                         <i class="fas fa-mobile-alt iconnav"></i>
                         Choisissez un restaurant
                     </li>
-                    <li>
-                        <span>2</span>
+                    <li class="container__cartes">
+                        <span class="container__numero">2</span>
                         <i class="fas fa-bars iconnav"></i>
                         Composez votre menu
                     </li>
-                    <li>
-                        <span>3</span>
+                    <li class="container__cartes">
+                        <span class="container__numero">3</span>
                         <i class="fas fa-store iconnav"></i>
                         Dégustez au restaurant
                     </li>
@@ -97,7 +99,7 @@
 
         <!--Liste des restaurants-->
         <div class="container--cartes">
-            <h3>Restaurants</h3>
+            <h3 class="container__titre">Restaurants</h3>
             <a href="Menupalettedugout.html" class="container--cartes carte">
                 <img
                     src="Maquettes_Ohmyfood/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"

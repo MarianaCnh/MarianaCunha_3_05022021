@@ -1,0 +1,54 @@
+
+/* loader */
+
+.loader {
+    background: linear-gradient($color-primary, $color-tertiary, $color-secondary);
+    font-family: 'Shrikhand' , Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
+    position: fixed;
+    z-index: 4;
+    width: 100%;
+    height: 100%;
+    animation: load 0s 3s forwards;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .loader--animation {
+            animation: texteloader 2s;
+        margin: auto;
+        font-size: xx-large;
+        .loader--texte {
+            text-align: center;
+            margin: auto;
+            vertical-align: middle;
+        }
+}
+
+}
+
+@keyframes texteloader {
+    0% {
+              transform: translateX(-1000px) scaleX(2.5) scaleY(0.2);
+              transform-origin: 100% 50%;
+              filter: blur(40px);
+      opacity: 0;
+    }
+    100% {
+              transform: translateX(0) scaleY(1) scaleX(1);
+              transform-origin: 50% 50%;
+              filter: blur(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes load {
+        0% {
+                opacity: 1;
+          }
+        100% {
+                opacity: 0;
+                display: none;
+                z-index: -1;
+          }
+  }
+
+  
