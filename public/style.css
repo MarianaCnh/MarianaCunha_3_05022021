@@ -76,11 +76,6 @@
     opacity: 1;
   }
 }
-.menu--titre {
-  font-family: Shrikhand, Verdana, Geneva, Tahoma, sans-serif;
-  margin: 0;
-}
-
 body {
   background-color: white;
   margin: 0;
@@ -291,18 +286,45 @@ ul {
   object-fit: cover;
 }
 
+.menu--titre {
+  font-family: Shrikhand, Verdana, Geneva, Tahoma, sans-serif;
+  margin: 0;
+  font-weight: lighter;
+}
+
 .menu--principal {
   z-index: 1;
-  background-color: #e2e2e2;
+  background-color: #f3f3f3;
   border-radius: 30px 30px 0 0;
   margin-top: -30px;
   padding: 1em;
   position: relative;
 }
-.menu--principal.coeur {
+.menu--principal .menu--tete {
   display: flex;
-  justify-content: flex-end;
-  text-decoration: none;
+  justify-content: space-between;
+  flex-direction: row;
+  padding: 10px;
+}
+.menu--principal .menu__coeur {
+  font-size: x-large;
+}
+.menu--principal .menu--coeur2 {
+  position: relative;
+  right: 30px;
+  opacity: 0;
+}
+.menu--principal .menu--coeur2:hover {
+  animation: animecoeur 1s;
+  background: -moz-linear-gradient(top, #9356DC 0%, #FF79DA 100%);
+  background: -webkit-linear-gradient(top, #9356DC 0%, #FF79DA 100%);
+  background: linear-gradient(to bottom, #9356DC 0%, #FF79DA 100%);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 1;
+  font-size: x-large;
 }
 .menu--principal .menu--decoration {
   border-bottom: 1px solid #99E2D0;
@@ -315,13 +337,13 @@ ul {
 .menu--principal .menu--li {
   display: flex;
   background-color: white;
-  border-radius: 30px;
-  margin: 10px;
+  border-radius: 20px;
   box-shadow: 1px 5px 10px #797777;
   overflow: hidden;
+  margin: 10px 0px 10px 0px;
 }
 .menu--principal .menu--li:hover .check--anime {
-  width: 5em;
+  width: 6em;
 }
 .menu--principal .menu--li:hover .menu--checkicon {
   display: initial;
@@ -344,7 +366,7 @@ ul {
 .menu--principal .check--anime {
   transition: width 1500ms;
   background-color: #99E2D0;
-  border-radius: 0 30px 30px 0;
+  border-radius: 0 20px 20px 0;
   width: 0;
 }
 .menu--principal .menu--lien {
