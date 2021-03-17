@@ -4,17 +4,17 @@
     display: flex;
     justify-content: flex-start;
     margin: 10px 0;
-    & .logo__menu {
+    .logo__menu {
         font-family: 'Shrikhand', Courier New, Courier, monospace;
         font-size: x-large;
         text-decoration: none;
         color: $color-normal;
         margin-left: 60px;
     }
-    & .arrow {
+    .arrow {
         text-decoration: none;
         color: $color-normal;
-        padding: 0.5em;
+        padding: 10px;
     }
 }
 .img__menu {
@@ -28,6 +28,7 @@
     font-family: Shrikhand, Verdana, Geneva, Tahoma, sans-serif;
     margin: 0;
     font-weight: lighter;
+    font-size:1.3em;
 }
 
 .menu--principal {
@@ -44,7 +45,7 @@
         padding: 10px;
     }
     .menu__coeur {
-        font-size: x-large;
+        font-size: 1.5em;
     }
     .menu--coeur2 {
         position: relative;

@@ -2,7 +2,7 @@
 /* loader */
 
 .loader {
-    background: linear-gradient($color-primary, $color-tertiary, $color-secondary);
+    background-color: $color-tertiary;
     font-family: 'Shrikhand' , Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
     position: fixed;
     z-index: 4;

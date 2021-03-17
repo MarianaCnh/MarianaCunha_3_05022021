@@ -91,7 +91,7 @@ ul {
 
 /* loader */
 .loader {
-  background: linear-gradient(#9356DC, #99E2D0, #FF79DA);
+  background-color: #99E2D0;
   font-family: "Shrikhand", Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
   position: fixed;
   z-index: 4;
@@ -137,12 +137,6 @@ ul {
     z-index: -1;
   }
 }
-@media (min-width: 320px) and (max-width: 767px) {
-  .titre__menu {
-    font-size: x-large;
-  }
-}
-
 .header__index {
   margin: auto;
   width: 100%;
@@ -277,7 +271,7 @@ ul {
 .header__menu .arrow {
   text-decoration: none;
   color: black;
-  padding: 0.5em;
+  padding: 10px;
 }
 
 .img__menu {
@@ -290,6 +284,7 @@ ul {
   font-family: Shrikhand, Verdana, Geneva, Tahoma, sans-serif;
   margin: 0;
   font-weight: lighter;
+  font-size: 1.3em;
 }
 
 .menu--principal {
@@ -307,7 +302,7 @@ ul {
   padding: 10px;
 }
 .menu--principal .menu__coeur {
-  font-size: x-large;
+  font-size: 1.5em;
 }
 .menu--principal .menu--coeur2 {
   position: relative;
