@@ -42,7 +42,7 @@
         display: flex;
         justify-content: space-between;
         flex-direction: row;
-        padding: 10px;
+        padding: 10px 0 10px 10px;
     }
     .menu__coeur {
         font-size: 1.5em;
@@ -52,17 +52,17 @@
         right: 30px;
         opacity: 0;
         &:hover {
-            animation: animecoeur 1s;
-            background:-moz-linear-gradient(top, $color-primary 0%, $color-secondary 100%); 
-            background: -webkit-linear-gradient(top, $color-primary 0%,$color-secondary 100%); 
-            background: linear-gradient(to bottom, $color-primary 0%, $color-secondary 100%);
-            -webkit-background-clip: text;
-            -moz-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color:transparent;
-            opacity: 1;
-            font-size: x-large;
-        }
+         animation: animecoeur 0.5s;
+         background:-moz-linear-gradient(top, $color-primary 0%, $color-secondary 100%); 
+         background: -webkit-linear-gradient(top, $color-primary 0%,$color-secondary 100%); 
+         background: linear-gradient(to bottom, $color-primary 0%, $color-secondary 100%);
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color:transparent;
+        opacity: 1;
+        font-size: x-large;
+        } 
     }
     .menu--decoration {
         border-bottom: 1px solid $color-tertiary;
@@ -81,19 +81,19 @@
         margin: 10px 0px 10px 0px;
         &:hover {
             .check--anime {
-                width: 6em;
+                width: 30%;
+                max-width: 100px;
+
             }
-            
             .menu--checkicon {
                 display: initial;
-                animation: animecheck 1s;
+                animation: 1500ms linear  animecheck;
             }
-            
         } 
     }
 
     .menu--animationplats {
-        animation:animemenu 1s;
+        animation:animemenu 3s;
     }
     
     .menu--checkicon {
@@ -109,10 +109,10 @@
         padding-top:20px;
     }
     .check--anime {
-        transition: width 1500ms;
+        width: 0;
         background-color: $color-tertiary;
         border-radius: 0 20px 20px 0;
-        width: 0;
+        transition: width 500ms ease;
     } 
     .menu--lien{
         color: $color-normal;
@@ -123,7 +123,7 @@
     .menu--texte {
         display: flex;
         flex-direction: column;
-        flex-grow: 1;
+        flex: 1;
         padding: 0.5em 0em 0.5em 0.5em;
         overflow: hidden;
     }
@@ -187,7 +187,7 @@
     0% {
        opacity: 0;
     }
-    100% {     
+    100% {
       opacity: 1;
     }
 }
@@ -202,3 +202,6 @@
             transform: rotate(360deg);
     }
 }
+
+  
+  

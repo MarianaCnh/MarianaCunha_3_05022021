@@ -1,5 +1,5 @@
 @mixin mobile-only {
-    @media (min-width: 320px) and (max-width: 767px) { @content; }
+    @media (min-width: $mobilemin) and (max-width: $mobilemax) { @content; }
 }
 
 @mixin search {
@@ -16,4 +16,41 @@
     height: 150px;
     object-fit: cover;
     border-radius: 30px 30px 0 0;
+}
+
+@mixin btn {
+    border-radius: 30px;
+    background: linear-gradient( $color-primary, $color-secondary);
+    padding: 1em;
+    font-family: 'Roboto', Courier New, Courier, monospace;
+    color: white;
+    border: none;
+    box-shadow: 1px 5px 10px rgb(173, 173, 173);
+    font-weight: bold;
+}
+
+@mixin btn--hover {
+    box-shadow: 0px 3px 4px 2px $shadow-color;
+    background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), $color-primary,$color-secondary;
+    transition:750ms;
+}
+
+/* BREAKPOINTS */
+
+@mixin tablette {
+    @media (min-width: $tablettemin) and (max-width:$tablettemax) {
+        @content;
+    }
+    
+}
+
+@mixin desktop {
+    @media (min-width:$desktopmin) and (max-width:$desktopmax) {
+        @content;
+    }
+    
+}
+
+@mixin mobile-only {
+    @media (min-width: $mobilemin) and (max-width: $mobilemax) { @content; }
 }

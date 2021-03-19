@@ -1,3 +1,4 @@
+/* BREAKPOINTS */
 .container--cartes {
   background-color: #f0f0f0;
   display: flex;
@@ -90,6 +91,24 @@ ul {
 }
 
 /* loader */
+.loader-spinner {
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  border: 3px solid rgba(172, 9, 9, 0.3);
+  margin-bottom: 10rem;
+  border-radius: 50%;
+  border-top-color: #fff;
+  animation: 1s spin infinite ease-in-out;
+  justify-content: center;
+  align-self: center;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
 .loader {
   background-color: #99E2D0;
   font-family: "Shrikhand", Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
@@ -113,6 +132,14 @@ ul {
   vertical-align: middle;
 }
 
+@keyframes arriereplan {
+  0% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
 @keyframes texteloader {
   0% {
     transform: translateX(-1000px) scaleX(2.5) scaleY(0.2);
@@ -299,7 +326,7 @@ ul {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
-  padding: 10px;
+  padding: 10px 0 10px 10px;
 }
 .menu--principal .menu__coeur {
   font-size: 1.5em;
@@ -310,7 +337,7 @@ ul {
   opacity: 0;
 }
 .menu--principal .menu--coeur2:hover {
-  animation: animecoeur 1s;
+  animation: animecoeur 0.5s;
   background: -moz-linear-gradient(top, #9356DC 0%, #FF79DA 100%);
   background: -webkit-linear-gradient(top, #9356DC 0%, #FF79DA 100%);
   background: linear-gradient(to bottom, #9356DC 0%, #FF79DA 100%);
@@ -338,14 +365,15 @@ ul {
   margin: 10px 0px 10px 0px;
 }
 .menu--principal .menu--li:hover .check--anime {
-  width: 6em;
+  width: 30%;
+  max-width: 100px;
 }
 .menu--principal .menu--li:hover .menu--checkicon {
   display: initial;
-  animation: animecheck 1s;
+  animation: 1500ms linear animecheck;
 }
 .menu--principal .menu--animationplats {
-  animation: animemenu 1s;
+  animation: animemenu 3s;
 }
 .menu--principal .menu--checkicon {
   margin: auto;
@@ -359,10 +387,10 @@ ul {
   padding-top: 20px;
 }
 .menu--principal .check--anime {
-  transition: width 1500ms;
+  width: 0;
   background-color: #99E2D0;
   border-radius: 0 20px 20px 0;
-  width: 0;
+  transition: width 500ms ease;
 }
 .menu--principal .menu--lien {
   color: black;
@@ -373,7 +401,7 @@ ul {
 .menu--principal .menu--texte {
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
+  flex: 1;
   padding: 0.5em 0em 0.5em 0.5em;
   overflow: hidden;
 }
