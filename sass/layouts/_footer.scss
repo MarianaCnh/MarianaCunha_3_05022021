@@ -12,6 +12,11 @@
         padding: 20px;
         list-style: none;
         line-height: 1.5em;
+        @include tablette {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
     }
     & a {
         text-decoration: none;

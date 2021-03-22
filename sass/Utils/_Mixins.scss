@@ -1,6 +1,4 @@
-@mixin mobile-only {
-    @media (min-width: $mobilemin) and (max-width: $mobilemax) { @content; }
-}
+
 
 @mixin search {
     border-radius: 20px;

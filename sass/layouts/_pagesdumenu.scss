@@ -10,6 +10,11 @@
         text-decoration: none;
         color: $color-normal;
         margin-left: 60px;
+        @include tablette {
+            display: flex;
+            align-self: center;
+            margin: auto;
+        }
     }
     .arrow {
         text-decoration: none;
@@ -71,6 +76,11 @@
         list-style: none;
         color: $color-normal;
         padding: 0;
+        @include tablette {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
     }
     .menu--li {
         display: flex;
@@ -79,11 +89,15 @@
         box-shadow: 1px 5px 10px rgb(121, 119, 119);
         overflow: hidden;
         margin: 10px 0px 10px 0px;
+        @include tablette {
+            width: 80%;
+            font-size: small;
+            font-weight: lighter;
+        }
         &:hover {
             .check--anime {
                 width: 30%;
                 max-width: 100px;
-
             }
             .menu--checkicon {
                 display: initial;
@@ -112,7 +126,7 @@
         width: 0;
         background-color: $color-tertiary;
         border-radius: 0 20px 20px 0;
-        transition: width 500ms ease;
+        transition: width 1s ease;
     } 
     .menu--lien{
         color: $color-normal;
@@ -144,6 +158,10 @@
     .menu--ingredients {
         font-size: medium;
         font-weight: lighter;
+        @include tablette {
+            font-size: small;
+            font-style: italic;
+        }
     }
 
     .btn{
@@ -151,6 +169,11 @@
         justify-content: center;
         margin: auto;
         cursor: pointer;
+        @include tablette {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+        }
         @include btn;
         &:hover{
             @include btn--hover
@@ -175,6 +198,19 @@
     text-align: center;
 }
 
+.entree {
+    @include tablette {
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+    }
+}
+
+.block__menu {
+    @include tablette {
+    display: flex;
+    }
+}
 
 
 .menu--ul li:nth-child(1) {animation-delay:.5s;}

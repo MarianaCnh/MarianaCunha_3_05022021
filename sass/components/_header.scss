@@ -4,6 +4,7 @@
 {
     margin: auto;
     width: 100%;
+    }
     .logo {
         display: flex;
         justify-content: center;
@@ -32,6 +33,10 @@
     .header__background {
         background-color:rgb(248, 248, 248);
         padding-bottom: 2em;
+        @include tablette {
+            border-radius: 0 0 20% 20%;
+            margin: auto;
+        }
     }
     .intro {
         text-align: center;
@@ -43,11 +48,13 @@
         padding-bottom: 1em;
         width: 100%;
         text-align: center;
-    } 
+    }
     .btn {
         display: flex;
         justify-content: center;
         margin: auto;
+        outline: none;
+        cursor: pointer;
         @include btn;
         &::hover{
             @include btn--hover
@@ -57,14 +64,15 @@
         width: 100%;
         justify-content: center;
         font-size: small;
-        & .container__titre {
-            margin-left: 2em;
-            font-size: large;
-        }
         & .container__choixrestaurant {
             padding: 1em;
             margin: 10px;
             list-style: none;
+            @include tablette {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+            }
         }
         .iconnav {
             color: rgb(163, 163, 163);
@@ -104,5 +112,27 @@
             margin-top: 5px;
         }
     }
-        
-}
+
+    .carte__responsive {
+        @include tablette {
+            display: grid;
+            grid-template-columns: 50% 50%;
+            grid-template-rows: 50% 50%;
+        }
+    }
+
+    .titre__carte{
+        margin-left: 2em;
+        font-size: large;
+        padding: 10px;
+        @include tablette {
+            display: flex;
+            justify-content: center;
+            font-size: larger;
+        }
+    }
+
+    .container__titre {
+        margin-left: 2em;
+        font-size: large;
+    }
