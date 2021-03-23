@@ -60,7 +60,6 @@
   background: linear-gradient(to bottom, #9356DC 0%, #FF79DA 100%);
   -webkit-background-clip: text;
   -moz-background-clip: text;
-  background-clip: text;
   -webkit-text-fill-color: transparent;
   opacity: 1;
 }
@@ -206,6 +205,12 @@ ul {
     margin: auto;
   }
 }
+@media (min-width: 769px) and (max-width: 2000px) {
+  .header__background {
+    margin: auto;
+    border-radius: 0 0 30% 30%;
+  }
+}
 
 .intro {
   text-align: center;
@@ -235,7 +240,7 @@ ul {
   box-shadow: 1px 5px 10px #adadad;
   font-weight: bold;
 }
-.btn::hover {
+.btn:hover {
   box-shadow: 0px 3px 4px 2px grey;
   background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), #9356DC, #FF79DA;
   transition: 750ms;
@@ -258,6 +263,13 @@ ul {
     justify-content: center;
   }
 }
+@media (min-width: 769px) and (max-width: 2000px) {
+  .container__principal .container__choixrestaurant {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
 .container__principal .iconnav {
   color: #a3a3a3;
   padding: 0.5em;
@@ -275,6 +287,11 @@ ul {
   padding: 1em;
   text-align: center;
   position: relative;
+}
+@media (min-width: 769px) and (max-width: 2000px) {
+  .container__principal .container__cartes {
+    width: 20%;
+  }
 }
 .container__principal .container__cartes:hover {
   background-color: #f2eafb;
@@ -306,6 +323,15 @@ ul {
     grid-template-rows: 50% 50%;
   }
 }
+@media (min-width: 769px) and (max-width: 2000px) {
+  .carte__responsive {
+    display: grid;
+    grid-template-columns: 40% 40%;
+    grid-template-rows: 50% 50%;
+    grid-column-gap: 50px;
+    justify-content: center;
+  }
+}
 
 .titre__carte {
   margin-left: 2em;
@@ -317,6 +343,12 @@ ul {
     display: flex;
     justify-content: center;
     font-size: larger;
+  }
+}
+@media (min-width: 769px) and (max-width: 2000px) {
+  .titre__carte {
+    display: flex;
+    justify-content: center;
   }
 }
 
@@ -340,6 +372,13 @@ ul {
   margin-left: 60px;
 }
 @media (min-width: 426px) and (max-width: 768px) {
+  .header__menu .logo__menu {
+    display: flex;
+    align-self: center;
+    margin: auto;
+  }
+}
+@media (min-width: 769px) and (max-width: 2000px) {
   .header__menu .logo__menu {
     display: flex;
     align-self: center;
@@ -394,7 +433,6 @@ ul {
   background: linear-gradient(to bottom, #9356DC 0%, #FF79DA 100%);
   -webkit-background-clip: text;
   -moz-background-clip: text;
-  background-clip: text;
   -webkit-text-fill-color: transparent;
   opacity: 1;
   font-size: x-large;
@@ -410,7 +448,12 @@ ul {
 @media (min-width: 426px) and (max-width: 768px) {
   .menu--principal .menu--ul {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+@media (min-width: 769px) and (max-width: 2000px) {
+  .menu--principal .menu--ul {
+    display: flex;
     justify-content: space-between;
   }
 }
@@ -424,9 +467,15 @@ ul {
 }
 @media (min-width: 426px) and (max-width: 768px) {
   .menu--principal .menu--li {
-    width: 80%;
     font-size: small;
     font-weight: lighter;
+    width: 30%;
+  }
+}
+@media (min-width: 769px) and (max-width: 2000px) {
+  .menu--principal .menu--li {
+    width: 40%;
+    margin: 10px;
   }
 }
 .menu--principal .menu--li:hover .check--anime {
@@ -514,6 +563,13 @@ ul {
     justify-content: center;
   }
 }
+@media (min-width: 769px) and (max-width: 2000px) {
+  .menu--principal .btn {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+  }
+}
 .menu--principal .btn:hover {
   box-shadow: 0px 3px 4px 2px grey;
   background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), #9356DC, #FF79DA;
@@ -534,20 +590,6 @@ ul {
   margin-top: 20px;
   font-size: small;
   text-align: center;
-}
-
-@media (min-width: 426px) and (max-width: 768px) {
-  .entree {
-    display: flex;
-    flex-direction: column;
-    width: 35%;
-  }
-}
-
-@media (min-width: 426px) and (max-width: 768px) {
-  .block__menu {
-    display: flex;
-  }
 }
 
 .menu--ul li:nth-child(1) {
@@ -594,6 +636,13 @@ ul {
   color: white;
   margin: 15px;
 }
+@media (min-width: 769px) and (max-width: 2000px) {
+  .container--footer h3 {
+    font-size: xx-large;
+    display: flex;
+    justify-content: center;
+  }
+}
 .container--footer ul {
   padding: 20px;
   list-style: none;
@@ -604,6 +653,14 @@ ul {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+  }
+}
+@media (min-width: 769px) and (max-width: 2000px) {
+  .container--footer ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: larger;
   }
 }
 .container--footer a {

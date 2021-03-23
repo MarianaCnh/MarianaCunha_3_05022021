@@ -15,6 +15,11 @@
             align-self: center;
             margin: auto;
         }
+        @include desktop {
+            display: flex;
+            align-self: center;
+            margin: auto;
+        }
     }
     .arrow {
         text-decoration: none;
@@ -63,7 +68,6 @@
          background: linear-gradient(to bottom, $color-primary 0%, $color-secondary 100%);
         -webkit-background-clip: text;
         -moz-background-clip: text;
-        background-clip: text;
         -webkit-text-fill-color:transparent;
         opacity: 1;
         font-size: x-large;
@@ -78,7 +82,10 @@
         padding: 0;
         @include tablette {
             display: flex;
-            flex-direction: column;
+            justify-content: space-between;
+        }
+        @include desktop {
+            display: flex;
             justify-content: space-between;
         }
     }
@@ -90,9 +97,13 @@
         overflow: hidden;
         margin: 10px 0px 10px 0px;
         @include tablette {
-            width: 80%;
             font-size: small;
             font-weight: lighter;
+            width: 30%;
+        }
+        @include desktop {
+            width: 40%;
+            margin: 10px;
         }
         &:hover {
             .check--anime {
@@ -174,6 +185,11 @@
             display: flex;
             justify-content: center;
         }
+        @include desktop {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+        }
         @include btn;
         &:hover{
             @include btn--hover
@@ -197,21 +213,6 @@
     font-size: small;
     text-align: center;
 }
-
-.entree {
-    @include tablette {
-    display: flex;
-    flex-direction: column;
-    width: 35%;
-    }
-}
-
-.block__menu {
-    @include tablette {
-    display: flex;
-    }
-}
-
 
 .menu--ul li:nth-child(1) {animation-delay:.5s;}
 .menu--ul li:nth-child(2) { animation-delay: 1s;}

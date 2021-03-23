@@ -1,5 +1,4 @@
 
-
 .header__index
 {
     margin: auto;
@@ -37,6 +36,10 @@
             border-radius: 0 0 20% 20%;
             margin: auto;
         }
+        @include desktop {
+            margin: auto;
+            border-radius: 0 0 30% 30%;
+        }
     }
     .intro {
         text-align: center;
@@ -56,7 +59,7 @@
         outline: none;
         cursor: pointer;
         @include btn;
-        &::hover{
+        &:hover{
             @include btn--hover
         }
     }
@@ -73,6 +76,11 @@
                 flex-direction: row;
                 justify-content: center;
             }
+            @include desktop {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+            }
         }
         .iconnav {
             color: rgb(163, 163, 163);
@@ -86,6 +94,9 @@
             padding: 1em;
             text-align: center;
             position: relative;
+            @include desktop {
+                width: 20%;
+            }
             &:hover {
                 background-color: #f2eafb;
                 opacity: 0.9;
@@ -119,6 +130,13 @@
             grid-template-columns: 50% 50%;
             grid-template-rows: 50% 50%;
         }
+        @include desktop {
+            display: grid;
+            grid-template-columns: 40% 40%;
+            grid-template-rows: 50% 50%;
+            grid-column-gap: 50px;
+            justify-content: center;
+        }
     }
 
     .titre__carte{
@@ -129,6 +147,10 @@
             display: flex;
             justify-content: center;
             font-size: larger;
+        }
+        @include desktop {
+            display: flex;
+            justify-content: center;
         }
     }
 
