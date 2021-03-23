@@ -48,6 +48,7 @@
     margin-top: -30px;
     padding: 1em;
     position: relative;
+    flex-grow: 1;
     .menu--tete {
         display: flex;
         justify-content: space-between;
@@ -63,7 +64,7 @@
         opacity: 0;
         &:hover {
          animation: animecoeur 0.5s;
-         background:-moz-linear-gradient(top, $color-primary 0%, $color-secondary 100%); 
+         background: -moz-linear-gradient(top, $color-primary 0%, $color-secondary 100%); 
          background: -webkit-linear-gradient(top, $color-primary 0%,$color-secondary 100%); 
          background: linear-gradient(to bottom, $color-primary 0%, $color-secondary 100%);
         -webkit-background-clip: text;
@@ -107,8 +108,7 @@
         }
         &:hover {
             .check--anime {
-                width: 30%;
-                max-width: 100px;
+                width: 40%;
             }
             .menu--checkicon {
                 display: initial;
@@ -138,6 +138,7 @@
         background-color: $color-tertiary;
         border-radius: 0 20px 20px 0;
         transition: width 1s ease;
+        max-width: 100px;
     } 
     .menu--lien{
         color: $color-normal;

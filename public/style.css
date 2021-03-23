@@ -3,7 +3,13 @@
   background-color: #f0f0f0;
   display: flex;
   flex-direction: column;
-  margin: auto;
+  flex-grow: 1;
+}
+
+.carte__responsive {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .carte {
@@ -86,6 +92,9 @@ body {
   padding: 0;
   font-family: "Roboto";
   z-index: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 ul {
@@ -326,10 +335,9 @@ ul {
 @media (min-width: 769px) and (max-width: 2000px) {
   .carte__responsive {
     display: grid;
-    grid-template-columns: 40% 40%;
+    grid-template-columns: 50% 50%;
     grid-template-rows: 50% 50%;
     grid-column-gap: 50px;
-    justify-content: center;
   }
 }
 
@@ -411,6 +419,7 @@ ul {
   margin-top: -30px;
   padding: 1em;
   position: relative;
+  flex-grow: 1;
 }
 .menu--principal .menu--tete {
   display: flex;
@@ -479,8 +488,7 @@ ul {
   }
 }
 .menu--principal .menu--li:hover .check--anime {
-  width: 30%;
-  max-width: 100px;
+  width: 40%;
 }
 .menu--principal .menu--li:hover .menu--checkicon {
   display: initial;
@@ -505,6 +513,7 @@ ul {
   background-color: #99E2D0;
   border-radius: 0 20px 20px 0;
   transition: width 1s ease;
+  max-width: 100px;
 }
 .menu--principal .menu--lien {
   color: black;

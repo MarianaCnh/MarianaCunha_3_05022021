@@ -132,10 +132,9 @@
         }
         @include desktop {
             display: grid;
-            grid-template-columns: 40% 40%;
+            grid-template-columns: 50% 50%;
             grid-template-rows: 50% 50%;
             grid-column-gap: 50px;
-            justify-content: center;
         }
     }
 
