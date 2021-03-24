@@ -77,17 +77,34 @@
     .menu--decoration {
         border-bottom: 1px solid $color-tertiary;
     }
+
+    .decoration--responsive {
+        @include desktop {
+            display: flex;
+            justify-content: center;
+            font-size: x-large;
+            margin: 20px;
+        }
+        @include tablette {
+            display: flex;
+            justify-content: center;
+            font-size: x-large;
+            margin: 20px;
+        }
+    }
     .menu--ul {
         list-style: none;
         color: $color-normal;
         padding: 0;
         @include tablette {
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
+            flex-wrap: wrap;
         }
         @include desktop {
             display: flex;
-            justify-content: space-between;
+            flex-wrap: wrap;
+            justify-content: center;
         }
     }
     .menu--li {
@@ -98,9 +115,9 @@
         overflow: hidden;
         margin: 10px 0px 10px 0px;
         @include tablette {
-            font-size: small;
             font-weight: lighter;
-            width: 30%;
+            width: 40%;
+            margin: 20px;
         }
         @include desktop {
             width: 40%;

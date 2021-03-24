@@ -26,7 +26,7 @@
       border: 8px solid $color-secondary;
       border-radius: 50%;
       border-top-color: $color-primary;
-      animation: 1s spin infinite ease-in-out;
+      animation: 1s spin infinite linear;
       margin-bottom: 1em;
     }
     .loader--animation {

@@ -7,9 +7,29 @@
 }
 
 .carte__responsive {
+  width: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
+}
+@media (min-width: 1059px) and (max-width: 2000px) {
+  .carte__responsive {
+    display: grid;
+    grid-template-columns: 40% 40%;
+    grid-template-rows: 200px 200px;
+    grid-column-gap: 50px;
+    grid-row-gap: 50px;
+    margin-bottom: 50px;
+  }
+}
+@media (min-width: 426px) and (max-width: 1058px) {
+  .carte__responsive {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .carte {
@@ -19,9 +39,15 @@
   border-radius: 30px;
   margin-bottom: 20px;
   box-shadow: 1px 5px 10px #cfcfcf;
-  width: 90%;
   display: flex;
   position: relative;
+  width: 90%;
+}
+@media (min-width: 1059px) and (max-width: 2000px) {
+  .carte {
+    width: 100%;
+    margin: auto;
+  }
 }
 .carte .carte--img {
   width: 100%;
@@ -127,7 +153,7 @@ ul {
   border: 8px solid #FF79DA;
   border-radius: 50%;
   border-top-color: #9356DC;
-  animation: 1s spin infinite ease-in-out;
+  animation: 1s spin infinite linear;
   margin-bottom: 1em;
 }
 .loader .loader--animation {
@@ -208,13 +234,13 @@ ul {
   background-color: #f8f8f8;
   padding-bottom: 2em;
 }
-@media (min-width: 426px) and (max-width: 768px) {
+@media (min-width: 426px) and (max-width: 1058px) {
   .header__background {
     border-radius: 0 0 20% 20%;
     margin: auto;
   }
 }
-@media (min-width: 769px) and (max-width: 2000px) {
+@media (min-width: 1059px) and (max-width: 2000px) {
   .header__background {
     margin: auto;
     border-radius: 0 0 30% 30%;
@@ -265,17 +291,18 @@ ul {
   margin: 10px;
   list-style: none;
 }
-@media (min-width: 426px) and (max-width: 768px) {
+@media (min-width: 426px) and (max-width: 1058px) {
   .container__principal .container__choixrestaurant {
     display: flex;
     flex-direction: row;
     justify-content: center;
   }
 }
-@media (min-width: 769px) and (max-width: 2000px) {
+@media (min-width: 1059px) and (max-width: 2000px) {
   .container__principal .container__choixrestaurant {
     display: flex;
     flex-direction: row;
+    align-self: center;
     justify-content: space-around;
   }
 }
@@ -297,9 +324,9 @@ ul {
   text-align: center;
   position: relative;
 }
-@media (min-width: 769px) and (max-width: 2000px) {
+@media (min-width: 1059px) and (max-width: 2000px) {
   .container__principal .container__cartes {
-    width: 20%;
+    width: 17%;
   }
 }
 .container__principal .container__cartes:hover {
@@ -325,35 +352,19 @@ ul {
   margin-top: 5px;
 }
 
-@media (min-width: 426px) and (max-width: 768px) {
-  .carte__responsive {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 50% 50%;
-  }
-}
-@media (min-width: 769px) and (max-width: 2000px) {
-  .carte__responsive {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 50% 50%;
-    grid-column-gap: 50px;
-  }
-}
-
 .titre__carte {
   margin-left: 2em;
   font-size: large;
   padding: 10px;
 }
-@media (min-width: 426px) and (max-width: 768px) {
+@media (min-width: 426px) and (max-width: 1058px) {
   .titre__carte {
     display: flex;
     justify-content: center;
     font-size: larger;
   }
 }
-@media (min-width: 769px) and (max-width: 2000px) {
+@media (min-width: 1059px) and (max-width: 2000px) {
   .titre__carte {
     display: flex;
     justify-content: center;
@@ -363,6 +374,12 @@ ul {
 .container__titre {
   margin-left: 2em;
   font-size: large;
+}
+@media (min-width: 1059px) and (max-width: 2000px) {
+  .container__titre {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 /* Pages des menu */
@@ -379,14 +396,14 @@ ul {
   color: black;
   margin-left: 60px;
 }
-@media (min-width: 426px) and (max-width: 768px) {
+@media (min-width: 426px) and (max-width: 1058px) {
   .header__menu .logo__menu {
     display: flex;
     align-self: center;
     margin: auto;
   }
 }
-@media (min-width: 769px) and (max-width: 2000px) {
+@media (min-width: 1059px) and (max-width: 2000px) {
   .header__menu .logo__menu {
     display: flex;
     align-self: center;
@@ -449,21 +466,39 @@ ul {
 .menu--principal .menu--decoration {
   border-bottom: 1px solid #99E2D0;
 }
+@media (min-width: 1059px) and (max-width: 2000px) {
+  .menu--principal .decoration--responsive {
+    display: flex;
+    justify-content: center;
+    font-size: x-large;
+    margin: 20px;
+  }
+}
+@media (min-width: 426px) and (max-width: 1058px) {
+  .menu--principal .decoration--responsive {
+    display: flex;
+    justify-content: center;
+    font-size: x-large;
+    margin: 20px;
+  }
+}
 .menu--principal .menu--ul {
   list-style: none;
   color: black;
   padding: 0;
 }
-@media (min-width: 426px) and (max-width: 768px) {
+@media (min-width: 426px) and (max-width: 1058px) {
   .menu--principal .menu--ul {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    flex-wrap: wrap;
   }
 }
-@media (min-width: 769px) and (max-width: 2000px) {
+@media (min-width: 1059px) and (max-width: 2000px) {
   .menu--principal .menu--ul {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 }
 .menu--principal .menu--li {
@@ -474,14 +509,14 @@ ul {
   overflow: hidden;
   margin: 10px 0px 10px 0px;
 }
-@media (min-width: 426px) and (max-width: 768px) {
+@media (min-width: 426px) and (max-width: 1058px) {
   .menu--principal .menu--li {
-    font-size: small;
     font-weight: lighter;
-    width: 30%;
+    width: 40%;
+    margin: 20px;
   }
 }
-@media (min-width: 769px) and (max-width: 2000px) {
+@media (min-width: 1059px) and (max-width: 2000px) {
   .menu--principal .menu--li {
     width: 40%;
     margin: 10px;
@@ -545,7 +580,7 @@ ul {
   font-size: medium;
   font-weight: lighter;
 }
-@media (min-width: 426px) and (max-width: 768px) {
+@media (min-width: 426px) and (max-width: 1058px) {
   .menu--principal .menu--ingredients {
     font-size: small;
     font-style: italic;
@@ -565,14 +600,14 @@ ul {
   box-shadow: 1px 5px 10px #adadad;
   font-weight: bold;
 }
-@media (min-width: 426px) and (max-width: 768px) {
+@media (min-width: 426px) and (max-width: 1058px) {
   .menu--principal .btn {
     margin-top: 20px;
     display: flex;
     justify-content: center;
   }
 }
-@media (min-width: 769px) and (max-width: 2000px) {
+@media (min-width: 1059px) and (max-width: 2000px) {
   .menu--principal .btn {
     margin-top: 20px;
     display: flex;
@@ -645,7 +680,7 @@ ul {
   color: white;
   margin: 15px;
 }
-@media (min-width: 769px) and (max-width: 2000px) {
+@media (min-width: 1059px) and (max-width: 2000px) {
   .container--footer h3 {
     font-size: xx-large;
     display: flex;
@@ -657,14 +692,14 @@ ul {
   list-style: none;
   line-height: 1.5em;
 }
-@media (min-width: 426px) and (max-width: 768px) {
+@media (min-width: 426px) and (max-width: 1058px) {
   .container--footer ul {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
   }
 }
-@media (min-width: 769px) and (max-width: 2000px) {
+@media (min-width: 1059px) and (max-width: 2000px) {
   .container--footer ul {
     display: flex;
     flex-direction: row;
