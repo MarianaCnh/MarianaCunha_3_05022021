@@ -96,6 +96,18 @@
   opacity: 1;
 }
 
+.carte--nouveau {
+  position: absolute;
+  right: 19px;
+  background-color: #99E2D0;
+  color: #2c916f;
+  padding: 5px;
+  margin-top: 20px;
+  font-size: small;
+  text-align: center;
+  border-radius: 10%;
+}
+
 @keyframes animecoeur {
   0% {
     -webkit-transform: scale(0);
@@ -623,17 +635,6 @@ ul {
 .menu--ul li {
   animation: animemenu 1s linear;
   animation-fill-mode: both;
-}
-
-.carte--nouveau {
-  position: absolute;
-  right: 19px;
-  background-color: #99E2D0;
-  color: #2c916f;
-  padding: 5px;
-  margin-top: 20px;
-  font-size: small;
-  text-align: center;
 }
 
 .menu--ul li:nth-child(1) {
