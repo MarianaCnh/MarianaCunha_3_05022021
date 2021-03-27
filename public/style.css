@@ -281,7 +281,8 @@ ul {
 }
 .btn:hover {
   box-shadow: 0px 3px 4px 2px grey;
-  background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), #9356DC, #FF79DA;
+  background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1));
+  background: linear-gradient(#9356DC, #FF79DA);
   transition: 750ms;
 }
 
@@ -620,7 +621,8 @@ ul {
 }
 .menu--principal .btn:hover {
   box-shadow: 0px 3px 4px 2px grey;
-  background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), #9356DC, #FF79DA;
+  background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1));
+  background: linear-gradient(#9356DC, #FF79DA);
   transition: 750ms;
 }
 
