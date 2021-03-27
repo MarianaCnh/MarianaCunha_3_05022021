@@ -1,13 +1,6 @@
 
 /* loader */
 
-
-@keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 .loader {
     background-color: $color-tertiary;
     font-family: 'Shrikhand' , Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
@@ -39,16 +32,13 @@
         }
 }
 
+}  
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
 }
-      @keyframes arriereplan {
-        0% {
-          background-position: 100% 50%;
-        }
-        100% {
-          background-position: 0% 50%;
-        }
-      }
-      
 
 @keyframes texteloader {
     0% {

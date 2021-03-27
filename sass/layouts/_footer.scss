@@ -2,7 +2,7 @@
     background-color: #353232;
     padding: 10px;
     @include mobile-only;
-    & h3 {
+    & .container__titre {
         font-family: 'Shrikhand';
         font-weight: normal;
         color: white;
@@ -13,7 +13,7 @@
             justify-content: center;
         }
     }
-    & ul {
+    & .container__elements {
         padding: 20px;
         list-style: none;
         line-height: 1.5em;
@@ -29,7 +29,7 @@
             font-size: larger;
         }
     }
-    & a {
+    & .liens__footer {
         text-decoration: none;
         color: white;
     }

@@ -141,11 +141,6 @@ ul {
 }
 
 /* loader */
-@keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
-}
 .loader {
   background-color: #99E2D0;
   font-family: "Shrikhand", Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
@@ -178,12 +173,9 @@ ul {
   vertical-align: middle;
 }
 
-@keyframes arriereplan {
-  0% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
   }
 }
 @keyframes texteloader {
@@ -675,40 +667,40 @@ ul {
   background-color: #353232;
   padding: 10px;
 }
-.container--footer h3 {
+.container--footer .container__titre {
   font-family: "Shrikhand";
   font-weight: normal;
   color: white;
   margin: 15px;
 }
 @media (min-width: 1059px) and (max-width: 2000px) {
-  .container--footer h3 {
+  .container--footer .container__titre {
     font-size: xx-large;
     display: flex;
     justify-content: center;
   }
 }
-.container--footer ul {
+.container--footer .container__elements {
   padding: 20px;
   list-style: none;
   line-height: 1.5em;
 }
 @media (min-width: 426px) and (max-width: 1058px) {
-  .container--footer ul {
+  .container--footer .container__elements {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
   }
 }
 @media (min-width: 1059px) and (max-width: 2000px) {
-  .container--footer ul {
+  .container--footer .container__elements {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     font-size: larger;
   }
 }
-.container--footer a {
+.container--footer .liens__footer {
   text-decoration: none;
   color: white;
 }
